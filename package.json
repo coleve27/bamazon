@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/coleve27/bamazon#readme",
   "dependencies": {
+    "all": "0.0.0",
     "inquirer": "^5.0.1",
     "mysql": "^2.15.0"
   }
