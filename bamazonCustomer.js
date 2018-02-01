@@ -17,27 +17,43 @@ connection.connect(function(err) {
   if (err) throw err;
   console.log("connected as id " + connection.threadId + "\n");
   //console.log the stock
-  inventory();
+  // inventory();
+  inquirer.
+  prompt([{
+      name: "purchase",
+      type: "input",
+      message: "What is the id of the item you wish to purchase?"
+    }, {
+      name: "amount",
+      type: "input",
+      message: "How many units would yo like to purchase?"
+    }])
+    .then(function(answer) {
+      var query = connection.query(
+        "SELECT stock_quantity FROM products WHERE ?", [{
+          item_id: answer.purchase
+        }],
+
+        function(err, res) {
+          if (err) throw err;
+
+
+
+
+        }
+      );
+
+
+
+      // connection.query(
+      //   "UPDATE products"
+      // )
+    });
   connection.end();
 });
 
 //inquirer practice
 
-inquirer.
-  prompt({
-    name: "purchase",
-    type: "input",
-    message: "What is the id of the item you wish to purchase?"
-  })
-// TODO: add promot for asking how many units
-
-
-
-  .then(function(answer){
-    connection.query(
-      "UPDATE products"
-    )
-  })
 
 
 
@@ -46,6 +62,7 @@ inquirer.
 
 
 
+//function that checks customer order against inventory//
 
 
 
@@ -61,9 +78,11 @@ function inventory() {
   var query = connection.query(
     "SELECT * FROM products",
     function(err, res) {
-      console.log(res[0].product_name + " products updated!\n");
-      // Call deleteProduct AFTER the UPDATE completes
-      // deleteProduct();
+      if (err) throw err;
+
+      for (i = 0; i < res.length; i++)
+        console.log(console.log('Item ID:' + res[i].item_id + ' Product Name: ' + res[i].product_name + ' Price: ' + '$' + res[i].price + '(Quantity left: ' + res[i].stock_quantity + ')'));
+
     }
   );
 }
