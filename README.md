@@ -5,7 +5,7 @@
 An interactive storefront that runs in the console using node. This storefront in no way resembles Amazon, except in name.
 
 This program consists of two separate, but related apps. The first, BamazonCustomer.js, allows a "customer" to place an order from the Bamazon store. First the customer is shown the inventory.
-![inventory](/bamazon/bamazon_screenshots/customer_1.png)
+![inventory](https://github.com/coleve27/bamazon/blob/master/bamazon_sceenshots/customer_1.png)
 
 The customer is prompted to select the item they would like to purchase by id and how many they would like to purachase.
 
