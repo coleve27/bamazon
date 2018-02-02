@@ -17,8 +17,6 @@ BamazonManager.js allows managers to perform 5 functions which a store manager c
 
 ![menu](https://github.com/coleve27/bamazon/blob/master/bamazon_sceenshots/manager_1.png)
 
-![menu 2](https://github.com/coleve27/bamazon/blob/master/bamazon_sceenshots/manager_2.png)
-
 ![menu 3](https://github.com/coleve27/bamazon/blob/master/bamazon_sceenshots/manager_3.png)
 
 ![menu 4](https://github.com/coleve27/bamazon/blob/master/bamazon_sceenshots/manager_4.png)
